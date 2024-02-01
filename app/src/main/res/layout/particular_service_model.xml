@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/particularServiceModelFullView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/particularServiceModelPrice"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:drawablePadding="2dp"
+                android:foregroundGravity="center"
+                android:text="Details"
+                android:textColor="@color/custom_color"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/particularServiceModelImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/app_name"
+                android:padding="5dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/particularServiceModelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/particularServiceModelLocation"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/particularServiceModelImage"
+                android:layout_toRightOf="@id/particularServiceModelImage"
+                android:foregroundGravity="center_horizontal"
+                android:text="Mr Bean"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/particularServiceModelPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@+id/particularServiceModelLocationLink"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:drawablePadding="2dp"
+                android:foregroundGravity="center"
+                android:text="9000 tk"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/particularServiceModelLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/particularServiceModelImage"
+                android:drawablePadding="2dp"
+                android:gravity="center"
+                android:text="Dhaka"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/particularServiceModelAdd"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_baseline_add_box_24" />
+
+            <TextView
+                android:id="@+id/particularServiceModelLocationLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/particularServiceModelName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/particularServiceModelImage"
+                android:text="Locate Me"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"
+                android:drawableTint="@color/custom_color"
+                android:textColor="@color/custom_color"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iconOfLocation1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/particularServiceModelName"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/particularServiceModelLocationLink"/>
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PostYours">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Work Station"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:paddingTop="16dp"
+        android:textSize="32sp"
+        android:background="@drawable/custom_shape"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to our NETWORK!"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/black"
+        android:padding="16dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/postYoursEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_payment_24"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/custom_color"
+            android:inputType="text"
+            android:maxLength="30"
+            android:hint="Hourly Charge"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/postYoursButton"
+        android:layout_width="match_parent"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:onClick="post"
+        android:text="Confirm"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postYoursEditText"
+        app:layout_constraintVertical_bias="0.237" />
+
+</LinearLayout>

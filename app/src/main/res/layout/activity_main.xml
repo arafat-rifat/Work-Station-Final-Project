@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:text="Work Station"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:paddingTop="16dp"-->
+<!--        android:textSize="32sp"-->
+<!--        android:background="@drawable/custom_shape"/>-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Welcome to"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        android:background="@drawable/custom_curve"/>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ws_logo"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        >
+
+        <TextView
+            android:id="@+id/textViewMainActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/custom_color"
+            android:onClick="logout"
+            android:text="Hi, Nasheed Shah"
+            android:textColor="@color/custom_color"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/bookings"
+            android:layout_width="wrap_content"
+            android:onClick="bookings"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bookingsImage"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bookings"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/custom_color"/>
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="8dp"
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="vertical"
+           android:layout_height="match_parent">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Explore Our Services:"
+               android:textSize="18sp"
+               android:textColor="@color/black"/>
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               app:cardCornerRadius="8dp"
+               android:padding="8dp"
+               app:cardElevation="@dimen/cardview_compat_inset_shadow"
+               android:layout_alignParentStart="true">
+               <RelativeLayout
+                   android:id="@+id/plumbingSanitaryServices"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:padding="8dp">
+                   <ImageView
+
+                       android:layout_width="150dp"
+                       android:layout_height="100dp"
+                       app:srcCompat="@drawable/plumbingsanitaryservices" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Explore Now"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:drawableEnd="@drawable/ic_baseline_send_24"
+                       android:drawablePadding="8dp"
+                       android:drawableTint="@color/custom_color"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentTop="true"
+                       android:textColor="@color/black"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Plumbing"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:textStyle="bold"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentBottom="true"
+                       android:textColor="@color/custom_color"/>
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               app:cardCornerRadius="8dp"
+               android:padding="8dp"
+               app:cardElevation="@dimen/cardview_compat_inset_shadow"
+               android:layout_alignParentStart="true">
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/gasStoveRepair"
+                   android:padding="8dp">
+                   <ImageView
+
+                       android:layout_width="150dp"
+                       android:layout_height="100dp"
+                       app:srcCompat="@drawable/gasstoverepairservices" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Explore Now"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:drawableEnd="@drawable/ic_baseline_send_24"
+                       android:drawablePadding="8dp"
+                       android:drawableTint="@color/custom_color"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentTop="true"
+                       android:textColor="@color/black"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Gas Stove Repair"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:textStyle="bold"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentBottom="true"
+                       android:textColor="@color/custom_color"/>
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               app:cardCornerRadius="8dp"
+               android:padding="8dp"
+               app:cardElevation="@dimen/cardview_compat_inset_shadow"
+               android:layout_alignParentStart="true">
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/pestControlServices"
+                   android:padding="8dp">
+                   <ImageView
+
+                       android:layout_width="150dp"
+                       android:layout_height="100dp"
+                       app:srcCompat="@drawable/pestcontrolservices" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Explore Now"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:drawableEnd="@drawable/ic_baseline_send_24"
+                       android:drawablePadding="8dp"
+                       android:drawableTint="@color/custom_color"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentTop="true"
+                       android:textColor="@color/black"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Pest Control"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:textStyle="bold"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentBottom="true"
+                       android:textColor="@color/custom_color"/>
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               app:cardCornerRadius="8dp"
+               android:padding="8dp"
+               app:cardElevation="@dimen/cardview_compat_inset_shadow"
+               android:layout_alignParentStart="true">
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/paintingServices"
+                   android:padding="8dp">
+                   <ImageView
+
+                       android:layout_width="150dp"
+                       android:layout_height="100dp"
+                       app:srcCompat="@drawable/paintingservices" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Explore Now"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:drawableEnd="@drawable/ic_baseline_send_24"
+                       android:drawablePadding="8dp"
+                       android:drawableTint="@color/custom_color"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentTop="true"
+                       android:textColor="@color/black"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Pest Control"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:textStyle="bold"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentBottom="true"
+                       android:textColor="@color/custom_color"/>
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               app:cardCornerRadius="8dp"
+               android:padding="8dp"
+               app:cardElevation="@dimen/cardview_compat_inset_shadow"
+               android:layout_alignParentStart="true">
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/houseShiftingService"
+                   android:padding="8dp">
+                   <ImageView
+
+                       android:layout_width="150dp"
+                       android:layout_height="100dp"
+                       app:srcCompat="@drawable/houseshiftingservices" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Explore Now"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:drawableEnd="@drawable/ic_baseline_send_24"
+                       android:drawablePadding="8dp"
+                       android:drawableTint="@color/custom_color"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentTop="true"
+                       android:textColor="@color/black"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="House Shifting"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:textStyle="bold"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentBottom="true"
+                       android:textColor="@color/custom_color"/>
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               app:cardCornerRadius="8dp"
+               android:padding="8dp"
+               app:cardElevation="@dimen/cardview_compat_inset_shadow"
+               android:layout_alignParentStart="true">
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/homeCleaningService"
+                   android:padding="8dp">
+                   <ImageView
+
+                       android:layout_width="150dp"
+                       android:layout_height="100dp"
+                       app:srcCompat="@drawable/homecleaningservices" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Explore Now"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:drawableEnd="@drawable/ic_baseline_send_24"
+                       android:drawablePadding="8dp"
+                       android:drawableTint="@color/custom_color"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentTop="true"
+                       android:textColor="@color/black"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Home Cleaning"
+                       android:textSize="18sp"
+                       android:layout_marginRight="16dp"
+                       android:textStyle="bold"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentBottom="true"
+                       android:textColor="@color/custom_color"/>
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+
+           <LinearLayout
+               android:id="@+id/dialThrough"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@color/custom_color"
+               android:layout_margin="8dp"
+               android:padding="24dp"
+               android:orientation="horizontal">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:text="0123456789"
+                   android:textSize="18sp"
+                   android:textAlignment="center"
+                   android:visibility="gone"
+                   android:textStyle="bold"
+                   android:textColor="@color/white"/>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:text="Emergency Contact"
+                   android:textSize="18sp"
+                   android:textAlignment="center"
+                   android:textStyle="bold"
+                   android:textColor="@color/white"/>
+           </LinearLayout>
+       </LinearLayout>
+   </ScrollView>
+
+
+
+
+</LinearLayout>
